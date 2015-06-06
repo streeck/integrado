@@ -13,52 +13,56 @@ import java.sql.SQLException;
 
 /**
  *
- * @author andrebnf
+ * @author acer
  */
 public class ConnectionFactory {
-  
-  public static Connection getConnection() throws DAOException {
-    try {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-            String connection="jdbc:mysql://localhost/ride";
-            String user="root", password="";
 
-            Connection conn = DriverManager.getConnection(connection, user, password);
+    public static Connection getConnection() throws DAOException {
+        try {
+            Class.forName("org.postgresql.Driver").newInstance();
+            Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost/LabBD", "charles", "asdf");
+
             return conn;
-    } catch (SQLException exception) {
+        } catch (SQLException exception) {
             throw new DAOException(exception.getMessage(), exception.fillInStackTrace());
-    } catch (ClassNotFoundException exception) {
+        } catch (ClassNotFoundException exception) {
             throw new DAOException(exception.getMessage(), exception.fillInStackTrace());
-    } catch (InstantiationException exception) {
+        } catch (InstantiationException exception) {
             throw new DAOException(exception.getMessage(), exception.fillInStackTrace());
-    } catch (IllegalAccessException exception) {
+        } catch (IllegalAccessException exception) {
             throw new DAOException(exception.getMessage(), exception.fillInStackTrace());
+        }
     }
-  }
-  
-  public static void closeConnection(Connection conn, PreparedStatement ps, ResultSet rs) 
-            throws DAOException {
-    close(conn, ps, rs);
-  }
 
-  public static void closeConnection(Connection conn, PreparedStatement ps)
+    public static void closeConnection(Connection conn, PreparedStatement ps, ResultSet rs)
             throws DAOException {
-    close(conn, ps, null);
-  }
-
-  public static void closeConnection(Connection conn)
-            throws DAOException {
-    close(conn, null, null);
-  }
-
-  private static void close(Connection conn, PreparedStatement ps, ResultSet rs)
-            throws DAOException {
-    try {
-            if (rs != null)   rs.close();
-            if (ps != null)   ps.close();
-            if (conn != null) conn.close();
-    } catch (SQLException exception) {
-            throw new DAOException(exception.getMessage(), exception.fillInStackTrace());
+        close(conn, ps, rs);
     }
-  }
+
+    public static void closeConnection(Connection conn, PreparedStatement ps)
+            throws DAOException {
+        close(conn, ps, null);
+    }
+
+    public static void closeConnection(Connection conn)
+            throws DAOException {
+        close(conn, null, null);
+    }
+
+    private static void close(Connection conn, PreparedStatement ps, ResultSet rs)
+            throws DAOException {
+        try {
+            if (rs != null) {
+                rs.close();
+            }
+            if (ps != null) {
+                ps.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        } catch (SQLException exception) {
+            throw new DAOException(exception.getMessage(), exception.fillInStackTrace());
+        }
+    }
 }

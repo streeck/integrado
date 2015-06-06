@@ -1,1 +1,10 @@
-/Users/charles/NetBeansProjects/Integrado/src/main/java/Main.java
+/Users/charles/NetBeansProjects/Integrado/src/main/java/controller/ConsultaRelativa.java
+/Users/charles/NetBeansProjects/Integrado/src/main/java/persistence/DAOException.java
+/Users/charles/NetBeansProjects/Integrado/src/main/java/lib/TesteBD.java
+/Users/charles/NetBeansProjects/Integrado/src/main/java/persistence/ConnectionFactory.java
+/Users/charles/NetBeansProjects/Integrado/src/main/java/persistence/FonteDAO.java
+/Users/charles/NetBeansProjects/Integrado/src/main/java/model/Fonte.java
+/Users/charles/NetBeansProjects/Integrado/src/main/java/persistence/SubDominioDAO.java
+/Users/charles/NetBeansProjects/Integrado/src/main/java/model/SubDominio.java
+/Users/charles/NetBeansProjects/Integrado/src/main/java/controller/ConsultaFonte.java
+/Users/charles/NetBeansProjects/Integrado/src/main/java/controller/ConsultaSubDominio.java

@@ -9,6 +9,21 @@ package persistence;
  *
  * @author charles
  */
+
+import model.Fonte;
+import java.sql.*;
+
 public class FonteDAO {
-    
+  private Connection connection;
+
+  public FonteDAO() throws DAOException {
+    this.connection = ConnectionFactory.getConnection();
+  }
+
+//  public Fonte PrimeiraConsulta(int offset, int limite, String nome) throws SQLException {
+//    Fonte fonte = new Fonte();
+//
+//    PreparedStatement statement;
+//    ResultSet set;
+//  }
 }

@@ -1,0 +1,10 @@
+lib/TesteBD.class
+controller/ConsultaFonte.class
+persistence/ConnectionFactory.class
+persistence/DAOException.class
+persistence/SubDominioDAO.class
+controller/ConsultaRelativa.class
+persistence/FonteDAO.class
+model/SubDominio.class
+controller/ConsultaSubDominio.class
+model/Fonte.class
