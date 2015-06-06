@@ -7,10 +7,17 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.SubDominio;
+import persistence.DAOException;
+import persistence.SubDominioDAO;
 
 /**
  *
@@ -70,7 +77,18 @@ public class ConsultaRelativa extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String entrada = request.getParameter("entrada");
+        String mes = request.getParameter("value");
+        
+        try {
+            SubDominioDAO subDAO = new SubDominioDAO();
+            List<SubDominio> subs = subDAO.consultaRelativa(entrada, mes);
+            
+        } catch (SQLException exception) {
+            throw new ServletException(exception.getMessage());
+        } catch (DAOException exception) {
+            throw new ServletException(exception.getMessage());
+        }
     }
 
     /**

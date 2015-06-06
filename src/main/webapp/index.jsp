@@ -11,10 +11,16 @@
     <title>Theme Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
     <!-- Bootstrap theme -->
-    <link href="bootstrap-theme.min.css" rel="stylesheet">
+    <!-- <link href="bootstrap-theme.min.css" rel="stylesheet"> -->
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
     <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet">
@@ -31,24 +37,38 @@
 
       <div class="jumbotron">
         <h3>Digite o subdominio o qual deseja saber as despesas totais do mês escolhido.</h3>
-        <div id="principal">
-          <select class="form-control input-lg" id="selectList">
-            <option>Janeiro</option>
-            <option>Fevereiro</option>
-            <option>Março</option>
-            <option>Abril</option>
-            <option>Maio</option>
-            <option>Junho</option>
-            <option>Julho</option>
-            <option>Agosto</option>
-            <option>Setembro</option>
-            <option>Outubro</option>
-            <option>Novembro</option>
-            <option>Dezembro</option>
-          </select>
-          <input type="text" class="form-control input-lg" placeholder="Digite o SubDominio" id="searchBox">
+        <div class="container">
+          <div class="row" id="principal">
+          <div class="col-md-2" id="selectList">
+              <select class="form-control input-lg" id="selectList2">
+                <option value="1">Janeiro</option>
+                <option value="2">Fevereiro</option>
+                <option value="3">Março</option>
+                <option value="4">Abril</option>
+                <option value="5">Maio</option>
+                <option value="6">Junho</option>
+                <option value="7">Julho</option>
+                <option value="8">Agosto</option>
+                <option value="9">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                  <input type="text" class="form-control input-lg" placeholder="Buscar" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-info btn-lg" type="button">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
         <p>Pressione <kbd>Enter</kbd> para buscar.</p>
       </div>
 
