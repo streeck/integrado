@@ -19,7 +19,7 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/Integrado/">Home</a></li>
-                <li class="active"><a href="#source">Source of Expenses</a></li>
+                <li><a href="source.jsp">Source of Expenses</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
