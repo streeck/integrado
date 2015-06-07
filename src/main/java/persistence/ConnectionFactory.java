@@ -20,7 +20,7 @@ public class ConnectionFactory {
     public static Connection getConnection() throws DAOException {
         try {
             Class.forName("org.postgresql.Driver").newInstance();
-            Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost/LabBD", "charles", "asdf");
+            Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/labBD", "postgres", "root");
 
             return conn;
         } catch (SQLException exception) {

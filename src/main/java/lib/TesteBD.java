@@ -26,7 +26,7 @@ public TesteBD() {
 
 	try {
             Class.forName("org.postgresql.Driver");
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost/LabBD", "charles", "asdf");
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/labBD", "postgres", "root");
 
             stmt = conn.createStatement();
 

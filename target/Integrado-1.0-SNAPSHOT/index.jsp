@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Theme Template for Bootstrap</title>
+    <title>Projeto Integrado</title>
 
     <!-- Bootstrap core CSS -->
     <!-- <link href="bootstrap.min.css" rel="stylesheet"> -->
