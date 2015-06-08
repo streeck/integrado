@@ -38,7 +38,16 @@
         <%@include file="_header.jsp" %>
         
         <div class="container" role="main">
-            
+            <div class="jumbotron">
+                <h3>ALGUMA COISA CRIATIVA PARA ESCREVER</h3>
+                <p>Essa pesquisa é para saber a fonte de despesa com maior gasto juntamente com sua descrição, clique no botão a seguir!</p>
+                <button type="button" class="btn btn-primary">Search</button>
+                
+                
+                <p>Nessa pesquisa, você receberá os resultados de uma lista contendo os valores gerados por cada tipo de licitação de um orgão juntamente com a descrição da fonte.</p>
+                <button type="button" class="btn btn-primary">Search</button>
+                
+            </div>
         </div>
     </body>
 </html>

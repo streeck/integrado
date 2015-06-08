@@ -20,8 +20,8 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/Integrado/">Home</a></li>
                 <li><a href="source.jsp">Source of Expenses</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="about.jsp">About</a></li>
+                <li><a href="contact.jsp">Contact</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
