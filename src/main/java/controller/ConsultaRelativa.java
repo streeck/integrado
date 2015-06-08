@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.json.JsonObject;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +43,7 @@ public class ConsultaRelativa extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ConsultaRelativa</title>");            
+            out.println("<title>Servlet ConsultaRelativa</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet ConsultaRelativa at " + request.getContextPath() + "</h1>");
@@ -63,7 +64,33 @@ public class ConsultaRelativa extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String entrada = request.getParameter("entrada");
+        String mes = request.getParameter("value");
+
+        response.setContentType("application/json");
+        response.setCharacterEncoding("utf-8");
+
+        try {
+            SubDominioDAO subDAO = new SubDominioDAO();
+            List<SubDominio> subs = subDAO.consultaRelativa(entrada, mes);
+            PrintWriter writer = response.getWriter();
+
+            String json = "[";
+            if(subs.size() != 0) {
+                for (SubDominio temp : subs) {
+                    json+= "{\"descricao\":\"" + temp.getDescricao().trim() + "\",";
+                    json+= "\"soma\":\"" + temp.getFormattedValor() + "\"},";
+                }
+                json = json.substring(0, json.length() - 1);
+            }
+            json += "]";
+
+            writer.print(json);
+            writer.close();
+
+        } catch (SQLException | DAOException exception) {
+            throw new ServletException(exception.getMessage());
+        }
     }
 
     /**
@@ -77,18 +104,6 @@ public class ConsultaRelativa extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String entrada = request.getParameter("entrada");
-        String mes = request.getParameter("value");
-        
-        try {
-            SubDominioDAO subDAO = new SubDominioDAO();
-            List<SubDominio> subs = subDAO.consultaRelativa(entrada, mes);
-            
-        } catch (SQLException exception) {
-            throw new ServletException(exception.getMessage());
-        } catch (DAOException exception) {
-            throw new ServletException(exception.getMessage());
-        }
     }
 
     /**

@@ -5,6 +5,9 @@
  */
 package model;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 /**
  *
  * @author charles
@@ -12,6 +15,12 @@ package model;
 public class SubDominio {
     private String descricao;
     private double valor;
+
+    public String getFormattedValor () {
+        String ret = NumberFormat.getCurrencyInstance(new Locale("pt", "BR")).format(this.valor);
+        System.out.println(ret);
+        return ret;
+    }
 
     public String getDescricao() {
         return descricao;
@@ -28,6 +37,6 @@ public class SubDominio {
     public void setValor(double valor) {
         this.valor = valor;
     }
-    
-    
+
+
 }

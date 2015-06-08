@@ -19,31 +19,31 @@ import persistence.ConnectionFactory;
 public class SubDominioDAO {
     private Connection connection;
     private int numResultados;
-    
+
     public SubDominioDAO() throws DAOException {
         this.connection = ConnectionFactory.getConnection();
     }
-    
+
     public List<SubDominio> consultaRelativa(String entrada, String mes) throws SQLException{
         List<SubDominio> resultados = new ArrayList<SubDominio>();
         PreparedStatement statement;
         ResultSet set;
-        
+
         String SQL = "SELECT descricao, SUM(valor) AS soma FROM despesa desp, subdominio subd WHERE desp.datames = "
-                + mes + " AND desp.codigosubdominio = subd.codigo AND descricaosubdominio ILIKE '%" + entrada + 
-                "' GROUP BY subd.descricao ORDER BY soma;";
-                
-                statement = connection.prepareStatement(SQL);
-                set = statement.executeQuery();
-                
+                + mes + " AND desp.codigosubdominio = subd.codigo AND descricaosubdominio ILIKE '%" + entrada +
+                "%' GROUP BY subd.descricao ORDER BY soma DESC;";
+
+        statement = connection.prepareStatement(SQL);
+        set = statement.executeQuery();
+
         while(set.next()) {
             SubDominio sub = new SubDominio();
-            sub.setDescricao(set.getString("entrada"));
-            sub.setValor(set.getInt("value"));
+            sub.setDescricao(set.getString("descricao"));
+            sub.setValor(set.getDouble("soma"));
             resultados.add(sub);
         }
-        
-        System.out.println(resultados);
+
+        // System.out.println(resultados);
         return resultados;
     }
 }
