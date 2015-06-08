@@ -18,10 +18,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/Integrado/">Home</a></li>
-                <li><a href="source.jsp">Source of Expenses</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li id="Home"><a href="/Integrado/">Home</a></li>
+                <li id="Source"><a href="source.jsp">Source of Expenses</a></li>
+                <li id="About"><a href="#about">About</a></li>
+                <li id="Contact"><a href="#contact">Contact</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

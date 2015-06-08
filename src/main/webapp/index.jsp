@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,9 +37,9 @@
 
       <div class="jumbotron">
         <h3>Digite o subdominio o qual deseja saber as despesas totais do mês escolhido.</h3>
-        <div class="container">
+        <form id="consulta-relativa" method="GET">
           <div class="row" id="principal">
-          <div class="col-md-2" id="selectList">
+            <div class="col-md-2" id="selectList">
               <select class="form-control input-lg" id="selectList2">
                 <option value="1">Janeiro</option>
                 <option value="2">Fevereiro</option>
@@ -58,9 +58,9 @@
             <div class="col-md-6">
               <div id="custom-search-input">
                 <div class="input-group col-md-12">
-                  <input type="text" class="form-control input-lg" placeholder="Buscar" />
+                  <input type="text" class="form-control input-lg" placeholder="Buscar" id="entrada"/>
                   <span class="input-group-btn">
-                    <button class="btn btn-info btn-lg" type="button">
+                    <button class="btn btn-info btn-lg" type="submit">
                       <i class="glyphicon glyphicon-search"></i>
                     </button>
                   </span>
@@ -68,8 +68,12 @@
               </div>
             </div>
           </div>
-        </div>
+        </form>
         <p>Pressione <kbd>Enter</kbd> para buscar.</p>
+      </div>
+
+      <div id="results">
+
       </div>
 
       <div class="page-header">
@@ -121,93 +125,6 @@
             </tbody>
           </table>
         </div>
-      </div>
-
-<!--       <div class="page-header">
-        <h1>Navbars</h1>
-      </div>
-
-      <nav class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Project name</a>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <nav class="navbar navbar-inverse">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Project name</a>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
- -->
-
-      <div class="page-header">
-        <h1>Alertas</h1>
-      </div>
-      <div class="alert alert-success text-center" role="alert">
-        <strong>Well done!</strong> You successfully read this important alert message.
-      </div>
-      <div class="alert alert-info text-center" role="alert">
-        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-      </div>
-      <div class="alert alert-warning text-center" role="alert">
-        <strong>Warning!</strong> Best check yo self, you're not looking too good.
-      </div>
-      <div class="alert alert-danger text-center" role="alert">
-      <strong>Oh snap!</strong> Change a few things up and try submitting again.
       </div>
 
       <!-- PANELS -->
@@ -279,6 +196,11 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="jquery-2.1.4.min.js"></script>
     <script src="bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
     <!--<script src="http://getbootstrap.com/assets/js/docs.min.js"></script>-->
+
+    <script>
+
+    </script>
   </body>
 </html>
