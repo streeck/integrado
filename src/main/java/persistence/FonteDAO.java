@@ -25,31 +25,36 @@ public class FonteDAO {
         this.connection = ConnectionFactory.getConnection();
     }
 
-//    public Fonte PrimeiraConsulta() throws SQLException, DAOException {
-//        Fonte fonte = new Fonte();
-//        PreparedStatement statement;
-//        ResultSet set;
-//
-//        String SQL = "CREATE OR REPLACE FUNCTION retorna_maior_valor() RETURNS TABLE(descricaoFonte VARCHAR, maiorValor numeric) AS $$\n"
-//                + "BEGIN\n"
-//                + "	RETURN QUERY\n"
-//                + "		SELECT descricao, SUM(valor) as soma\n"
-//                + "			FROM despesa desp, subdominio subd\n"
-//                + "				WHERE desp.codigosubdominio = subd.codigo\n"
-//                + "					GROUP BY subd.descricao ORDER BY soma DESC LIMIT 1;\n"
-//                + "END;\n"
-//                + "$$ LANGUAGE plpgsql;\n"
-//                + "\n"
-//                + "SELECT * FROM retorna_maior_valor();";
-//
-//        statement = connection.prepareStatement(SQL);
-//        set = statement.executeQuery();
-//
-//        System.out.println(fonte);
-//        return fonte;
-//    }
+    public List<Fonte> PrimeiraConsulta(int limit) throws SQLException, DAOException {
+        List<Fonte>fonte = new ArrayList<Fonte>();
+        PreparedStatement statement;
+        ResultSet set;
+        
+        String SQL = "CREATE OR REPLACE FUNCTION retorna_maior_valor() RETURNS TABLE(descricaoFonte VARCHAR, maiorValor numeric) AS $$\n"
+                + "BEGIN\n"
+                + "	RETURN QUERY\n"
+                + "		SELECT descricao, SUM(valor) as soma\n"
+                + "			FROM despesa desp, subdominio subd\n"
+                + "				WHERE desp.codigosubdominio = subd.codigo\n"
+                + "					GROUP BY subd.descricao ORDER BY soma DESC LIMIT"+ limit + ";\n"
+                + "END;\n"
+                + "$$ LANGUAGE plpgsql;\n"
+                + "\n"
+                + "SELECT * FROM retorna_maior_valor();";
 
-    public List<Fonte> SegundaConsulta(int offset, String nome) throws SQLException, DAOException {
+        statement = connection.prepareStatement(SQL);
+        set = statement.executeQuery();
+        
+        while (set.next()) {
+            Fonte font = new Fonte();
+            fonte.add(font);
+        }
+
+        System.out.println(fonte);
+        return fonte;
+    }
+
+    public List<Fonte> SegundaConsulta(int offset) throws SQLException, DAOException {
         List<Fonte> fonte = new ArrayList<Fonte>();
         PreparedStatement statement;
         ResultSet set;

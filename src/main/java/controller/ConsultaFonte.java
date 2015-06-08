@@ -18,6 +18,21 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class ConsultaFonte extends HttpServlet {
 
+    private int offset;
+    
+    public void ConsultaFonte(){
+        offset = 0;
+    }
+    
+    public void setOffset(){
+        this.offset += 10;
+    }
+    
+    public int getOffset(){
+        return this.offset;
+    }
+    
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -70,9 +85,19 @@ public class ConsultaFonte extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        int offset;
+        String table = "";
+        
+        response.setCharacterEncoding("UTF-8");
         
         
+             
+        setOffset();
+        
+        PrintWriter writer = response.getWriter();
+        writer.print(table);
+        writer.close();
+        
+        ConsultaFonte();
     }
 
     /**
