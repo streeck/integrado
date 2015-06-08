@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -32,6 +33,8 @@
         <!-- Custom styles for this template -->
         <link href="style.css" rel="stylesheet">
 
+        <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        <script src="./js/main.js"></script>
     </head>
     <body role="document">
 

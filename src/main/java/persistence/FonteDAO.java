@@ -30,6 +30,7 @@ public class FonteDAO {
         PreparedStatement statement;
         ResultSet set;
         
+
         String SQL = "CREATE OR REPLACE FUNCTION retorna_maior_valor() RETURNS TABLE(descricaoFonte VARCHAR, maiorValor numeric) AS $$\n"
                 + "BEGIN\n"
                 + "	RETURN QUERY\n"
