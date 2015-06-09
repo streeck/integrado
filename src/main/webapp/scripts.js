@@ -84,7 +84,7 @@ $(document).ready(function() {
       alert("ERROR!");
     });
   });
-  $('.consulta-fonte').click(function(e) {
+  $('body').on("click", ".consulta-fonte", function(e) {
     var pagAtual = $(this).attr("data-pag");
     e.preventDefault();
     $.ajax({
@@ -92,10 +92,11 @@ $(document).ready(function() {
       url: 'ConsultaFonte',
       data: {offset: pagAtual * 10}
     }).done(function(data) {
+      console.log(pagAtual);
       $('#results').html(createTableFonte(data));
       $('#results').append(createPagination(7, pagAtual));
     }).fail(function(data) {
       alert("ERROR!");
     });
-  })
+  });
 });
