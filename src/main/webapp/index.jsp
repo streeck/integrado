@@ -39,7 +39,7 @@
       <div class="well well-lg">
         <div class="row">
           <div class="col-md-8">
-            <h4>Digite o subdominio o qual deseja saber as despesas totais do m&ecircs escolhido.</h4>
+            <h4>Digite o sub setor que deseja saber as despesas no m&ecircs selecionado.</h4>
             <form id="consulta-relativa" method="GET">
               <div class="row">
                 <div class="col-md-3" id="selectList">
@@ -80,7 +80,7 @@
                 <h3 class="panel-title">Consultas Sugeridas</h3>
               </div>
               <ul class="list-group">
-                <li class="list-group-item"><button class="btn btn-link" id="consulta-subdominio">SubDominio de maior despesa</button></li>
+                <li class="list-group-item"><button class="btn btn-link" id="consulta-subdominio">Sub setor de maior despesa</button></li>
                 <li class="list-group-item"><button class="consulta-fonte btn btn-link" data-pag="0">Fontes de despesa com licita&ccedil&atildeo</button></li>
               </ul>
             </div>
