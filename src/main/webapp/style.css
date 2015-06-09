@@ -21,20 +21,13 @@ body {
     width: 50%;
 }
 
-#principal {
-  margin: 0 auto;
-}
-
 #selectList {
-  width: 13%;
-  padding: 3px;
   border: 0;
   border-radius: 6px;
   box-shadow: none;
 }
 
 #selectList2 {
-  padding: 3px;
   border: 0;
   border-radius: 6px;
   background-color: #fff;
@@ -42,33 +35,32 @@ body {
 }
 
 #custom-search-input{
-    padding: 3px;
     border: solid 1px #E4E4E4;
     border-radius: 6px;
     background-color: #fff;
 }
 
-#custom-search-input input{
-    border: 0;
-    box-shadow: none;
+#custom-search-input input {
+  border: 0;
+  box-shadow: none;
 }
 
 #custom-search-input button{
-    margin: 2px 0 0 0;
-    background: none;
-    box-shadow: none;
-    border: 0;
-    color: #666666;
-    padding: 0 8px 0 10px;
-    border-left: solid 1px #ccc;
+  margin: 2px 0 0 0;
+  background: none;
+  box-shadow: none;
+  border: 0;
+  color: #666666;
+  padding: 0 8px 0 10px;
+  border-left: solid 1px #ccc;
 }
 
 #custom-search-input button:hover{
-    border: 0;
-    box-shadow: none;
-    border-left: solid 1px #ccc;
+  border: 0;
+  box-shadow: none;
+  border-left: solid 1px #ccc;
 }
 
 #custom-search-input .glyphicon-search{
-    font-size: 23px;
+  font-size: 23px;
 }

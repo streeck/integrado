@@ -78,7 +78,34 @@ public class ConsultaFonte extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        response.setContentType("application/json");
+        response.setCharacterEncoding("utf-8");
+
+        try {
+            FonteDAO fonDAO = new FonteDAO();
+            int offset = Integer.parseInt(request.getParameter("offset"));
+            List<Fonte> fontes = fonDAO.consultaFonte(offset);
+            int paginas = fonDAO.pagFonte();
+            PrintWriter writer = response.getWriter();
+            
+            String json = "{\"count\":\"" + paginas + "\",";
+            json += "\"data\":\"[";
+            if (!fontes.isEmpty()) {
+                for (Fonte temp : fontes) {
+                    json += "{\"descricao\":\"" + temp.getFonte().trim() + "\",";
+                    json += "\"licitacao\":\"" + temp.getTipoLicitacao() + "\",";
+                    json += "\"soma\":\"" + temp.getFormattedValor() + "\"},";
+                }
+                json = json.substring(0, json.length() - 1);
+            }
+            json += "]\"}";
+            
+            writer.print(json);
+            writer.close();
+
+        } catch (SQLException | DAOException exception) {
+            throw new ServletException(exception.getMessage());
+        }
     }
 
     /**
@@ -92,32 +119,6 @@ public class ConsultaFonte extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String table = "";
-        List<Fonte> fonte = new ArrayList<Fonte>();
-
-        response.setCharacterEncoding("UTF-8");
-        
-        while(fonte != null){
-            FonteDAO font = null; 
-            try {
-                font = new FonteDAO();
-            } catch (DAOException ex) {
-                Logger.getLogger(ConsultaFonte.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            try {
-                fonte = font.SegundaConsulta(offset);
-            } catch (SQLException ex) {
-                Logger.getLogger(ConsultaFonte.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (DAOException ex) {
-                Logger.getLogger(ConsultaFonte.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            
-            PrintWriter writer = response.getWriter();
-            writer.print(table);
-            writer.close();
-        }
-        
-        setOffset();
     }
 
     /**

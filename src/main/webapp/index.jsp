@@ -29,163 +29,68 @@
 
   <body role="document">
 
+    <%@page contentType="text/html" pageEncoding="UTF-8"%>
     <%@include file="_header.jsp" %>
 
     <div class="container" role="main">
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
 
-      <div class="jumbotron">
-        <h3>Digite o subdominio o qual deseja saber as despesas totais do mês escolhido.</h3>
-        <form id="consulta-relativa" method="GET">
-          <div class="row" id="principal">
-            <div class="col-md-2" id="selectList">
-              <select class="form-control input-lg" id="selectList2">
-                <option value="1">Janeiro</option>
-                <option value="2">Fevereiro</option>
-                <option value="3">Março</option>
-                <option value="4">Abril</option>
-                <option value="5">Maio</option>
-                <option value="6">Junho</option>
-                <option value="7">Julho</option>
-                <option value="8">Agosto</option>
-                <option value="9">Setembro</option>
-                <option value="10">Outubro</option>
-                <option value="11">Novembro</option>
-                <option value="12">Dezembro</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <div id="custom-search-input">
-                <div class="input-group col-md-12">
-                  <input type="text" class="form-control input-lg" placeholder="Buscar" id="entrada"/>
-                  <span class="input-group-btn">
-                    <button class="btn btn-info btn-lg" type="submit">
-                      <i class="glyphicon glyphicon-search"></i>
-                    </button>
-                  </span>
+      <div class="well well-lg">
+        <div class="row">
+          <div class="col-md-8">
+            <h4>Digite o subdominio o qual deseja saber as despesas totais do m&ecircs escolhido.</h4>
+            <form id="consulta-relativa" method="GET">
+              <div class="row">
+                <div class="col-md-3" id="selectList">
+                  <select class="form-control input-lg" id="selectList2">
+                    <option value="1">Janeiro</option>
+                    <option value="2">Fevereiro</option>
+                    <option value="3">Mar&ccedilo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Maio</option>
+                    <option value="6">Junho</option>
+                    <option value="7">Julho</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                  </select>
+                </div>
+                <div class="col-md-9">
+                  <div id="custom-search-input">
+                    <div class="input-group">
+                      <input type="text" class="form-control input-lg" placeholder="Buscar" id="entrada"/>
+                      <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="submit">
+                          <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </form>
+            <p>Pressione <kbd>Enter</kbd> para buscar.</p>
           </div>
-        </form>
-        <p>Pressione <kbd>Enter</kbd> para buscar.</p>
+          <div class="col-sm-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Consultas Sugeridas</h3>
+              </div>
+              <ul class="list-group">
+                <li class="list-group-item"><button class="btn btn-link" id="consulta-subdominio">SubDominio de maior despesa</button></li>
+                <li class="list-group-item"><button class="consulta-fonte btn btn-link" data-pag="0">Fontes de despesa com licita&ccedil&atildeo</button></li>
+              </ul>
+            </div>
+          </div><!-- /.col-sm-4 -->
+        </div>
+
       </div>
 
       <div id="results">
-
-      </div>
-
-      <div class="page-header">
-        <h1>Button</h1>
-      </div>
-      <p>
-        <button type="button" class="btn btn-default">Default</button>
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-success">Success</button>
-        <button type="button" class="btn btn-info">Info</button>
-        <button type="button" class="btn btn-warning">Warning</button>
-        <button type="button" class="btn btn-danger">Danger</button>
-        <button type="button" class="btn btn-link">Link</button>
-      </p>
-
-      <div class="page-header">
-        <h1>Table</h1>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- PANELS -->
-      <div class="page-header">
-        <h1>Painéis</h1>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
-          <div class="panel panel-success">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-          <div class="panel panel-info">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
-          <div class="panel panel-warning">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-          <div class="panel panel-danger">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div> <!-- /.col-sm-4 -->
+      <!-- Onde será apresentado os resultados das consultas. -->
       </div>
 
     </div> <!-- /container -->

@@ -7,10 +7,15 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.SubDominio;
+import persistence.DAOException;
+import persistence.SubDominioDAO;
 
 /**
  *
@@ -56,7 +61,30 @@ public class ConsultaSubDominio extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        response.setContentType("application/json");
+        response.setCharacterEncoding("utf-8");
+
+        try {
+            SubDominioDAO subDAO = new SubDominioDAO();
+            List<SubDominio> subs = subDAO.consultaSubdominio();
+            PrintWriter writer = response.getWriter();
+
+            String json = "[";
+            if (!subs.isEmpty()) {
+                for (SubDominio temp : subs) {
+                    json += "{\"descricao\":\"" + temp.getDescricao().trim() + "\",";
+                    json += "\"soma\":\"" + temp.getFormattedValor() + "\"},";
+                }
+                json = json.substring(0, json.length() - 1);
+            }
+            json += "]";
+
+            writer.print(json);
+            writer.close();
+
+        } catch (SQLException | DAOException exception) {
+            throw new ServletException(exception.getMessage());
+        }
     }
 
     /**

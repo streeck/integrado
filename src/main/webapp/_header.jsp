@@ -5,6 +5,8 @@
 --%>
 
 <!-- Fixed navbar -->
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -18,10 +20,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li id="Home"><a href="/Integrado/">Home</a></li>
-                <li id="Source"><a href="source.jsp">Source of Expenses</a></li>
-                <li id="About"><a href="#about">About</a></li>
-                <li id="Contact"><a href="#contact">Contact</a></li>
+                <li id="Home"><a href="/Integrado/">Início</a></li>
+                <li id="About"><a href="#about">Sobre</a></li>
+                <li id="Contact"><a href="#contact">Contato</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

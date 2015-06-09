@@ -5,6 +5,9 @@
  */
 package model;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 /**
  *
  * @author charles
@@ -24,6 +27,12 @@ public class Fonte {
 
     public double getValor() {
         return valor;
+    }
+    
+    public String getFormattedValor() {
+        String ret = NumberFormat.getCurrencyInstance(new Locale("pt", "BR")).format(this.valor);
+        System.out.println(ret);
+        return ret;
     }
 
     public void setValor(double valor) {
