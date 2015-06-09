@@ -20,9 +20,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li id="Home"><a href="/Integrado/">Início</a></li>
-                <li id="About"><a href="#about">Sobre</a></li>
-                <li id="Contact"><a href="#contact">Contato</a></li>
+                <li id="Home"><a href="/Integrado/">Inicio</a></li>
+                <li id="About"><a href="about.jsp">Sobre</a></li>
+<!--                <li id="Contact"><a href="#contact">Contato</a></li>-->
             </ul>
         </div><!--/.nav-collapse -->
     </div>
