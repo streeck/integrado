@@ -88,8 +88,19 @@ public class ConsultaFonte extends HttpServlet {
             int paginas = fonDAO.pagFonte();
             PrintWriter writer = response.getWriter();
             
-            String json = "{\"count\":\"" + paginas + "\",";
-            json += "\"data\":\"[";
+//            String json = "{\"count\":\"" + paginas + "\",";
+//            json += "\"data\":\"[";
+//            if (!fontes.isEmpty()) {
+//                for (Fonte temp : fontes) {
+//                    json += "{\"descricao\":\"" + temp.getFonte().trim() + "\",";
+//                    json += "\"licitacao\":\"" + temp.getTipoLicitacao() + "\",";
+//                    json += "\"soma\":\"" + temp.getFormattedValor() + "\"},";
+//                }
+//                json = json.substring(0, json.length() - 1);
+//            }
+//            json += "]\"}";
+            
+            String json = "[";
             if (!fontes.isEmpty()) {
                 for (Fonte temp : fontes) {
                     json += "{\"descricao\":\"" + temp.getFonte().trim() + "\",";
@@ -98,7 +109,7 @@ public class ConsultaFonte extends HttpServlet {
                 }
                 json = json.substring(0, json.length() - 1);
             }
-            json += "]\"}";
+            json += "]";
             
             writer.print(json);
             writer.close();

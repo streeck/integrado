@@ -46,7 +46,7 @@ function createTableFonte(data) {
 function createPagination(count, pagAtual) {
   var html = ""
 
-  html += "<nav><ul class=\"pagination\">";
+  html += "<nav class=\"text-center\"><ul class=\"pagination\">";
 
   for(var i = 0; i < count; i++) {
     if(i === pagAtual) {
@@ -91,13 +91,10 @@ $(document).ready(function() {
       type: 'GET',
       url: 'ConsultaFonte',
       data: {offset: pagAtual * 10}
-    }).done(function(json) {
-      console.log("WORKS?");
-      $('#results').html(createTableFonte(json['data']));
-      console.log("WORKS?");
-      $('#results').html(createPagination(json['count'], pagAtual));
-      console.log("WORKS?");
-    }).fail(function(json) {
+    }).done(function(data) {
+      $('#results').html(createTableFonte(data));
+      $('#results').append(createPagination(7, pagAtual));
+    }).fail(function(data) {
       alert("ERROR!");
     });
   })

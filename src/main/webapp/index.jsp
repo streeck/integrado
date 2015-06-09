@@ -102,6 +102,7 @@
     <script src="jquery-2.1.4.min.js"></script>
     <script src="bootstrap.min.js"></script>
     <script src="scripts.js"></script>
+    <link href="style.css" rel="stylesheet">
     <!--<script src="http://getbootstrap.com/assets/js/docs.min.js"></script>-->
 
     <script>
