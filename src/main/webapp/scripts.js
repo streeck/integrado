@@ -92,7 +92,6 @@ $(document).ready(function() {
       url: 'ConsultaFonte',
       data: {offset: pagAtual * 10}
     }).done(function(data) {
-      console.log(pagAtual);
       $('#results').html(createTableFonte(data));
       $('#results').append(createPagination(7, pagAtual));
     }).fail(function(data) {
