@@ -1,11 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
- var PAGATUAL = 0;
-
 function createTableSub(data) {
   var html = "";
 
@@ -24,7 +16,7 @@ function createTableSub(data) {
   $('#results').html(html);
 }
 
-function createTableFonte(data) {
+function createTableFonte(data, pagAtual) {
   var html = "";
 
   if(data.length !== 0) {
@@ -32,7 +24,7 @@ function createTableFonte(data) {
     html += "<table class=\"table table-hover\"> <thead><tr><th>#</th><th>Descrição Fonte</th><th>Tipo de Licitação</th><th>Despesas</th></tr></thead><tbody>";
 
     for (var i = 0, len = data.length; i < len; i++) {
-      html += "<tr><td>" + (i + 1) + "</td><td>" + data[i].descricao + "</td><td>" + data[i].licitacao + "<td>" + data[i].soma + "</td></tr>";
+      html += "<tr><td>" + (pagAtual * 10 + i + 1) + "</td><td>" + data[i].descricao + "</td><td>" + data[i].licitacao + "<td>" + data[i].soma + "</td></tr>";
     }
 
     html += "</tbody></table>";
@@ -93,7 +85,7 @@ $(document).ready(function() {
       url: 'ConsultaFonte',
       data: {offset: pagAtual * 10}
     }).done(function(data) {
-      $('#results').html(createTableFonte(data));
+      $('#results').html(createTableFonte(data, pagAtual));
       $('#results').append(createPagination(7, pagAtual));
     }).fail(function(data) {
       alert("ERROR!");
