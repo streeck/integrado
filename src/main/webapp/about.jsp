@@ -38,7 +38,22 @@
         <%@include file="_header.jsp" %>
         
         <div class="container" role="main">
-            
+            <div class="jumbotron">
+                <h2>Dados Abertos Governamentais</h2>
+                 <p> </p>
+                <p>Desenvolver um sistema que realiza a apresentação e busca de dados abertos governamentais 
+                    municipais. Nesse caso, temos como foco as fontes de despesas de um município.</p>
+                <p> </p>
+                <p>Esse site foi desenvolvido em conjunto com 3 disciplinas (WEB, LabBD e ES2). Temos como foco, duas
+                consultas sugeridas que mostram: a maior fonte de despesa especificada por um subdominio; e outra que mostra
+                uma paginação com vários dados, mostrando os valores gastos por cada licitação dos orgãos, ordenados do maior
+                para o menor</p>
+                <p> </p>
+                <p>Assim como, uma consulta relativa onde o usuário escolhe o mês que queira verificar os dados referentes
+                    a um subdominio.</p>
+                <p> </p>
+                <p>Todos os resultados que geram paginação são exibidos em tabelas para melhor visualização.</p>
+            </div>
         </div>
     </body>
 </html>
