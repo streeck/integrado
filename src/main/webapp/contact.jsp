@@ -64,20 +64,20 @@
           <img src="img/marcello.jpg" class="img-circle">
           <div class="caption">
             <h3>Marcello Acar</h3>
-            <p>...</p>
-            <p><a href="#" class="btn btn-social-icon btn-github">
+            <p>Sou boiola e amo o Charles. <br> Quero distribuir pra geral!</p>
+            <p><a href="https://github.com/marcelloacar" class="btn btn-social-icon btn-github">
               <i class="fa fa-github"></i>
             </a>
-            <a href="#" class="btn btn-linkedin">
+            <a href="https://www.linkedin.com/pub/marcello-acar/b9/86a/48" class="btn btn-linkedin">
               <i class="fa fa-linkedin"></i>
             </a>
-            <a href="#" class="btn btn-social-icon btn-facebook">
+            <a href="https://www.facebook.com/marcello.acar" class="btn btn-social-icon btn-facebook">
               <i class="fa fa-facebook"></i>
             </a>
-            <a href="#" class="btn btn-social-icon btn-google">
+            <a href="https://plus.google.com/u/0/112899313314021285339/" class="btn btn-social-icon btn-google">
               <i class="fa fa-google"></i>
             </a>
-            <a href="#" class="btn btn-social-icon btn-bitbucket">
+            <a href="https://bitbucket.org/marcelloacar" class="btn btn-social-icon btn-bitbucket">
               <i class="fa fa-bitbucket"></i>
             </a></p>
           </div>
