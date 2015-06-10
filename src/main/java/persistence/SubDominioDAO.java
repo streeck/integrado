@@ -6,6 +6,7 @@
 package persistence;
 
 import java.sql.*;
+import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -29,6 +30,9 @@ public class SubDominioDAO {
         List<SubDominio> resultados = new ArrayList<SubDominio>();
         PreparedStatement statement;
         ResultSet set;
+        
+        entrada = Normalizer.normalize(entrada, Normalizer.Form.NFD);
+        entrada = entrada.replaceAll("[\\p{InCombiningDiacriticalMarks}]", "");
 
         String SQL = "SELECT descricao, SUM(valor) AS soma FROM despesa desp, subdominio subd WHERE desp.datames = "
                 + mes + " AND desp.codigosubdominio = subd.codigo AND descricaosubdominio ILIKE '%" + entrada +

@@ -11,13 +11,13 @@
     <title>Projeto Integrado</title>
 
     <!-- Bootstrap core CSS -->
-    <!-- <link href="bootstrap.min.css" rel="stylesheet"> -->
+    <link href="bootstrap.min.css" rel="stylesheet">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
     <!-- Bootstrap theme -->
-    <!-- <link href="bootstrap-theme.min.css" rel="stylesheet"> -->
+    <link href="bootstrap-theme.min.css" rel="stylesheet">
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
@@ -33,9 +33,6 @@
     <%@include file="_header.jsp" %>
 
     <div class="container" role="main">
-
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-
       <div class="well well-lg">
         <div class="row">
           <div class="col-md-8">
