@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : fontes
     Created on : 07/06/2015, 11:14:09
     Author     : Marcello
@@ -15,16 +15,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Projeto Integrado</title>
+    <title>Projeto Integrado - Sobre</title>
 
     <!-- Bootstrap core CSS -->
-    <!-- <link href="bootstrap.min.css" rel="stylesheet"> -->
+    <link href="bootstrap.min.css" rel="stylesheet">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
     <!-- Bootstrap theme -->
-    <!-- <link href="bootstrap-theme.min.css" rel="stylesheet"> -->
+    <link href="bootstrap-theme.min.css" rel="stylesheet">
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
@@ -36,12 +36,12 @@
     <body role="document">
 
         <%@include file="_header.jsp" %>
-        
+
         <div class="container" role="main">
             <div class="jumbotron">
                 <h2>Dados Abertos Governamentais</h2>
                  <p> </p>
-                <p>Desenvolver um sistema que realiza a apresentação e busca de dados abertos governamentais 
+                <p>Desenvolver um sistema que realiza a apresentação e busca de dados abertos governamentais
                     municipais. Nesse caso, temos como foco as fontes de despesas de um município.</p>
                 <p> </p>
                 <p>Esse site foi desenvolvido em conjunto com 3 disciplinas (WEB, LabBD e ES2). Temos como foco, duas
@@ -55,5 +55,9 @@
                 <p>Todos os resultados que geram paginação são exibidos em tabelas para melhor visualização.</p>
             </div>
         </div>
+        <!-- Scripts -->
+        <script src="jquery-2.1.4.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        <script src="scripts.js"></script>
     </body>
 </html>

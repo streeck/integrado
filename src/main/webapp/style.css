@@ -7,6 +7,29 @@ body {
   padding-top: 75px;
 }
 
+.img-circle {
+  max-width: 140px;
+  max-height: 140px;
+}
+
+.centered {
+  width: 600px;
+}
+
+.perfil {
+  width: 50%;
+}
+
+.thumbnail {
+  border-style: none;
+  background-color: transparent;
+}
+
+.caption {
+  background-color: white;
+  border-radius: 30px;
+}
+
 .jumbotron p {
   margin: 0;
 }

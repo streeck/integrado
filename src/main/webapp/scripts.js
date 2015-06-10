@@ -52,6 +52,7 @@ function createPagination(count, pagAtual) {
 }
 
 $(document).ready(function() {
+  // Consulta Relativa
   $('#consulta-relativa').submit(function(e) {
     e.preventDefault();
     $.ajax({
@@ -66,6 +67,8 @@ $(document).ready(function() {
       alert("ERROR!");
     });
   });
+
+  // Consulta Subdominio
   $('#consulta-subdominio').click(function(e) {
     $.ajax({
       type: 'GET',
@@ -77,6 +80,8 @@ $(document).ready(function() {
       alert("ERROR!");
     });
   });
+
+  // Consulta Fonte
   $('body').on("click", ".consulta-fonte", function(e) {
     var pagAtual = $(this).attr("data-pag");
     e.preventDefault();
@@ -91,4 +96,20 @@ $(document).ready(function() {
       alert("ERROR!");
     });
   });
+
+  // Home
+  if($('.well').length > 0) {
+    $('#Home').addClass('active');
+  };
+
+  // About
+  if($('.jumbotron').length > 0) {
+    $('#About').addClass('active');
+  };
+
+  // Contact
+  if($('.img-circle').length > 0) {
+    $('#Contact').addClass('active');
+    $('body').css({"background-image": "url('img/background.jpg')"})
+  };
 });
