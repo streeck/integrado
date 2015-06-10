@@ -61,7 +61,7 @@
                 <div class="col-md-9">
                   <div id="custom-search-input">
                     <div class="input-group">
-                      <input type="text" class="form-control input-lg" placeholder="Buscar" id="entrada"/>
+                      <input type="text" class="form-control input-lg" placeholder="Ex: Ensino" id="entrada"/>
                       <span class="input-group-btn">
                         <button class="btn btn-info btn-lg" type="submit">
                           <i class="glyphicon glyphicon-search"></i>
@@ -77,7 +77,7 @@
           <div class="col-sm-4">
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h3 class="panel-title">Consultas Sugeridas</h3>
+                <h3 class="panel-title">Buscas Sugeridas</h3>
               </div>
               <ul class="list-group">
                 <li class="list-group-item"><button class="btn btn-link" id="consulta-subdominio">Sub setor de maior despesa</button></li>

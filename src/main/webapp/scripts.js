@@ -42,7 +42,7 @@ function createPagination(count, pagAtual) {
 
   for(var i = 0; i < count; i++) {
     if(i == pagAtual) {
-      console.log("WORKS?");
+      // console.log("WORKS?");
       html += "<li class=\"active\"><a class=\"consulta-fonte\" data-pag=\""+ i + "\" href=\"#\">"+ (i + 1) +"</a></li>";
     } else {
       html += "<li><a class=\"consulta-fonte\" data-pag=\""+ i + "\" href=\"#\">"+ (i + 1) +"</a></li>";
@@ -62,6 +62,7 @@ $(document).ready(function() {
              value: $('#selectList2').val()}
     }).done(function(data) {
       createTableSub(data);
+      $('#entrada').val("");
     }).fail(function(data) {
       alert("ERROR!");
     });
