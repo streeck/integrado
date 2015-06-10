@@ -39,7 +39,7 @@
           <img src="img/charles.jpg" class="img-circle">
           <div class="caption">
             <h3>Charles Moraes</h3>
-            <p>Estudante de Ciência da Computação, apaixonado por programação, DIY e ciclismo.<br>Tenho uma namorada incrível!</p>
+            <p>Estudante de Ciência da Computação, apaixonado por programação, DIY e ciclismo.<br>Tenho a melhor namorada do mundo!</p>
             <p><a href="https://github.com/streeck" class="btn btn-social-icon btn-github">
               <i class="fa fa-github"></i>
             </a>
@@ -64,7 +64,7 @@
           <img src="img/marcello.jpg" class="img-circle">
           <div class="caption">
             <h3>Marcello Acar</h3>
-            <p>Sou boiola e amo o Charles. <br> Quero distribuir pra geral!</p>
+            <p>Estudante de Ciência da Computação, ex-futuro médico, apesar de não ter tempo, adoro praticar esportes. <br>Apaixonado pela minha namorada.</p>
             <p><a href="https://github.com/marcelloacar" class="btn btn-social-icon btn-github">
               <i class="fa fa-github"></i>
             </a>
