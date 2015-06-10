@@ -22,6 +22,7 @@
             <ul class="nav navbar-nav">
                 <li id="Home"><a href="/Integrado/">Inicio</a></li>
                 <li id="About"><a href="about.jsp">Sobre</a></li>
+                <li id="Contact"><a href="contact.jsp">Contato</a></li>
 <!--                <li id="Contact"><a href="#contact">Contato</a></li>-->
             </ul>
         </div><!--/.nav-collapse -->
