@@ -52,23 +52,16 @@ public class SubDominioDAO {
         List<SubDominio> resultados = new ArrayList<SubDominio>();
         PreparedStatement statement;
         ResultSet set;
-
         
-//        String SQL = "CREATE OR REPLACE FUNCTION retorna_maior_valor() RETURNS TABLE(descricaoFonte VARCHAR, maiorValor numeric) AS $$ BEGIN RETURN QUERY SELECT descricao, SUM(valor) as soma FROM despesa desp, subdominio subd WHERE desp.codigosubdominio = subd.codigo GROUP BY subd.descricao ORDER BY soma DESC LIMIT 1;END;$$ LANGUAGE plpgsql";
-//        statement = connection.prepareStatement(SQL);
-//        statement.executeQuery();
-        
-//        SQL = "SELECT * FROM retorna_maior_valor();";
-        
-        String SQL = "SELECT descricao, SUM(valor) as soma FROM despesa desp, subdominio subd WHERE desp.codigosubdominio = subd.codigo GROUP BY subd.descricao ORDER BY soma DESC LIMIT 1;";
+        String SQL = "SELECT * FROM retorna_maior_valor();";
         
         statement = connection.prepareStatement(SQL);
         set = statement.executeQuery();
 
         while(set.next()) {
             SubDominio sub = new SubDominio();
-            sub.setDescricao(set.getString("descricao"));
-            sub.setValor(set.getDouble("soma"));
+            sub.setDescricao(set.getString("descricaofonte"));
+            sub.setValor(set.getDouble("maiorvalor"));
             resultados.add(sub);
         }
 
