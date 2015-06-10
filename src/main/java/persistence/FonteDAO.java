@@ -30,7 +30,10 @@ public class FonteDAO {
         PreparedStatement statement;
         ResultSet set;
 
-        String SQL = "SELECT f.descricao as DescricaoFonte, tipoLici.descricao as DescricaoTipoLicitacao, SUM(desp.valor) as soma FROM despesa desp, fonte f, orgao org, tipolicitacao tipoLici WHERE desp.codigofonte = f.codigo AND desp.codigoorgao = org.codigo AND desp.codigotipolicitacao = tipoLici.codigo GROUP BY f.descricao, tipoLici.descricao ORDER BY soma DESC LIMIT 10 OFFSET " + offset + ";";
+        String SQL = "SELECT f.descricao as DescricaoFonte, tipoLici.descricao as DescricaoTipoLicitacao, SUM(desp.valor) as soma "
+                + "FROM despesa desp, fonte f, orgao org, tipolicitacao tipoLici "
+                + "WHERE desp.codigofonte = f.codigo AND desp.codigoorgao = org.codigo AND desp.codigotipolicitacao = tipoLici.codigo "
+                + "GROUP BY f.descricao, tipoLici.descricao ORDER BY soma DESC LIMIT 10 OFFSET " + offset + ";";
         
         System.out.println(SQL);
         
