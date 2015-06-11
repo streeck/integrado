@@ -40,19 +40,19 @@
           <div class="caption">
             <h3>Charles Moraes</h3>
             <p>Estudante de Ciência da Computação, apaixonado por programação, DIY e ciclismo.<br>Tenho a melhor namorada do mundo!</p>
-            <p><a href="https://github.com/streeck" class="btn btn-social-icon btn-github">
+            <p><a href="#" onclick="customButtomClick('https://github.com/streeck')" class="btn btn-social-icon btn-github">
               <i class="fa fa-github"></i>
             </a>
-            <a href="https://br.linkedin.com/pub/charles-moraes/60/983/a68" class="btn btn-linkedin">
+            <a href="#" onclick="customButtomClick('https://br.linkedin.com/pub/charles-moraes/60/983/a68')" class="btn btn-linkedin">
               <i class="fa fa-linkedin"></i>
             </a>
-            <a href="https://www.facebook.com/charles.david.129" class="btn btn-social-icon btn-facebook">
+            <a href="#" onclick="customButtomClick('https://www.facebook.com/charles.david.129')" class="btn btn-social-icon btn-facebook">
               <i class="fa fa-facebook"></i>
             </a>
-            <a href="https://plus.google.com/u/0/102024472255403359832/" class="btn btn-social-icon btn-google">
+            <a href="#" onclick="customButtomClick('https://plus.google.com/u/0/102024472255403359832/')" class="btn btn-social-icon btn-google">
               <i class="fa fa-google"></i>
             </a>
-            <a href="https://bitbucket.org/streeck" class="btn btn-social-icon btn-bitbucket">
+            <a href="#" onclick="customButtomClick('https://bitbucket.org/streeck')" class="btn btn-social-icon btn-bitbucket">
               <i class="fa fa-bitbucket"></i>
             </a></p>
           </div>
@@ -65,19 +65,19 @@
           <div class="caption">
             <h3>Marcello Acar</h3>
             <p>Estudante de Ciência da Computação, ex-futuro médico, apesar de não ter tempo, adoro praticar esportes. <br>Apaixonado pela minha namorada.</p>
-            <p><a href="https://github.com/marcelloacar" class="btn btn-social-icon btn-github">
+            <p><a hre="#" onclick="customButtomClick('https://github.com/marcelloacar')" class="btn btn-social-icon btn-github">
               <i class="fa fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/pub/marcello-acar/b9/86a/48" class="btn btn-linkedin">
+            <a href="#" onclick="customButtomClick('https://www.linkedin.com/pub/marcello-acar/b9/86a/48')" class="btn btn-linkedin">
               <i class="fa fa-linkedin"></i>
             </a>
-            <a href="https://www.facebook.com/marcello.acar" class="btn btn-social-icon btn-facebook">
+            <a href="#" onclick="customButtomClick('https://www.facebook.com/marcello.acar')" class="btn btn-social-icon btn-facebook">
               <i class="fa fa-facebook"></i>
             </a>
-            <a href="https://plus.google.com/u/0/112899313314021285339/" class="btn btn-social-icon btn-google">
+            <a hef="#" onclick="customButtomClick('https://plus.google.com/u/0/112899313314021285339/')" class="btn btn-social-icon btn-google">
               <i class="fa fa-google"></i>
             </a>
-            <a href="https://bitbucket.org/marcelloacar" class="btn btn-social-icon btn-bitbucket">
+            <a href="#" onclick="customButtomClick('https://bitbucket.org/marcelloacar')" class="btn btn-social-icon btn-bitbucket">
               <i class="fa fa-bitbucket"></i>
             </a></p>
           </div>

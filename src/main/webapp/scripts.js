@@ -51,6 +51,10 @@ function createPagination(count, pagAtual) {
   return html;
 }
 
+function customButtomClick(url){
+    return window.open(url, "_blank") ;
+}
+
 $(document).ready(function() {
   // Consulta Relativa
   $('#consulta-relativa').submit(function(e) {
@@ -112,4 +116,6 @@ $(document).ready(function() {
     $('#Contact').addClass('active');
     $('body').css({"background-image": "url('img/background.jpg')"})
   };
+  
+  
 });
