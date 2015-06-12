@@ -25,7 +25,7 @@
 
     <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet">
-    <link href="css/bootstrap-social.css" rel="stylesheet">
+    <link href="bootstrap-social.css" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
   </head>

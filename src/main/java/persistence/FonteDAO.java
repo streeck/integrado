@@ -13,9 +13,6 @@ import model.Fonte;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.servlet.ServletException;
-import model.SubDominio;
-import persistence.ConnectionFactory;
 
 public class FonteDAO {
 
@@ -34,9 +31,9 @@ public class FonteDAO {
                 + "FROM despesa desp, fonte f, orgao org, tipolicitacao tipoLici "
                 + "WHERE desp.codigofonte = f.codigo AND desp.codigoorgao = org.codigo AND desp.codigotipolicitacao = tipoLici.codigo "
                 + "GROUP BY f.descricao, tipoLici.descricao ORDER BY soma DESC LIMIT 10 OFFSET " + offset + ";";
-        
+
         System.out.println(SQL);
-        
+
         statement = connection.prepareStatement(SQL);
         set = statement.executeQuery();
 
@@ -50,15 +47,15 @@ public class FonteDAO {
 
         return resultados;
     }
-    
+
     public int pagFonte() throws SQLException, DAOException {
         PreparedStatement statement;
         ResultSet set;
-        
+
         String SQL = "SELECT COUNT(*) FROM (SELECT f.descricao as DescricaoFonte, tipoLici.descricao as DescricaoTipoLicitacao, SUM(desp.valor) as soma FROM despesa desp, fonte f, orgao org, tipolicitacao tipoLici WHERE desp.codigofonte = f.codigo AND desp.codigoorgao = org.codigo AND desp.codigotipolicitacao = tipoLici.codigo GROUP BY f.descricao, tipoLici.descricao) as contador;";
         statement = connection.prepareStatement(SQL);
         set = statement.executeQuery();
-        
+
         set.next();
         int paginas = set.getInt("count");
         return (paginas / 10) + 1;

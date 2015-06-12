@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,6 +17,9 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
     <!-- Bootstrap theme -->
     <link href="bootstrap-theme.min.css" rel="stylesheet">
 
@@ -24,12 +28,14 @@
 
     <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet">
+    <!-- <link href="css/test.css" rel="stylesheet"> -->
+
+    <script src="pizza.js"></script>
+    <script src="scripts.js"></script>
 
   </head>
 
   <body role="document">
-
-    <%@page contentType="text/html" pageEncoding="UTF-8"%>
     <%@include file="_header.jsp" %>
 
     <div class="container" role="main">
@@ -90,16 +96,41 @@
       <!-- Onde será apresentado os resultados das consultas. -->
       </div>
 
+      <div class="text-center">
+        <button type="button" class="btn btn-primary hidden" id="modalButton" data-toggle="modal" data-target="#myModal">Visualizar Gr&aacutefico</button>
+      </div>
+
+      <div class="text-center" id="btnModal">
+
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Pizza dos Sub setores.</h4>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
     <script src="scripts.js"></script>
     <link href="style.css" rel="stylesheet">
+    <script src="accounting.min.js"></script>
     <!--<script src="http://getbootstrap.com/assets/js/docs.min.js"></script>-->
   </body>
 </html>
