@@ -1,0 +1,3 @@
+@function -modify-color($color, $counter, $depth: $items-in-list) {
+  @return adjust_hue($pie-color, $i * ($items-in-list * 3));
+}
