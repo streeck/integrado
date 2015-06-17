@@ -70,7 +70,13 @@ function createChart(data) {
 
   $('.modalBody').append(html);
   Pizza.init();
+
 }
+
+function customButtomClick(url) {
+  return window.open(url, "_blank") ;
+}
+
 
 $(document).ready(function() {
   // Consulta Relativa
@@ -145,4 +151,6 @@ $(document).ready(function() {
     $('#Contact').addClass('active');
     $('body').css({"background-image": "url('img/background.jpg')"})
   };
+
+
 });
